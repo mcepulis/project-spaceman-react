@@ -1,12 +1,15 @@
+import { Link } from './Link';
+import { Btn } from '../btn/Btn';
 import style from './Nav.module.css';
 
 function Nav() {
     return (
         <nav className={style.mainNav}>
-            <a className={`${style.navLink} ${style.active}`} href="/">About</a>
-            <a className={style.navLink} href="/">Portfolio</a>
-            <a className={style.navLink} href="/">Job</a>
-            <a className={style.navLink} href="/">Contact</a>
+            <Link title="About" />
+            <Link title="Jobs" isActive={true} />
+            <Link title="Portfolio" />
+            <Link title="Contact" />
+            <Btn title="Register" color="white" size="small" />
         </nav>
     );
 }
